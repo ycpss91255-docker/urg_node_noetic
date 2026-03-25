@@ -18,7 +18,7 @@ jobs:
           mkdir -p "${ARCHIVE_NAME}"
           cp -r Dockerfile compose.yaml \
                 build.sh run.sh exec.sh stop.sh \
-                .env.example .hadolint.yaml script/ test/smoke_test/ \
+                .env.example .hadolint.yaml script/ test/smoke_test/ docker_setup_helper/src/ \
                 README.md doc/ "${ARCHIVE_NAME}/"
 
           tar czf "${ARCHIVE_NAME}.tar.gz" "${ARCHIVE_NAME}"
