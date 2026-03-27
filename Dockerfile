@@ -112,7 +112,7 @@ RUN apt-get update && \
         # Application packages
         ros-${ROS_DISTRO}-urg-node \
         ros-${ROS_DISTRO}-laser-proc \
-        &&
+        && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -202,7 +202,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ros-${ROS_DISTRO}-urg-node \
         ros-${ROS_DISTRO}-laser-proc \
-        &&
+        && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
