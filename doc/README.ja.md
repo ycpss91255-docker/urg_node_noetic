@@ -92,7 +92,7 @@ graph TD
 
     EXT3 --> runtime["runtime\nurg_node + laser_proc"]:::stage
 
-    bats-src --> test["test一時的\nスモークテスト、ビルド後に破棄"]:::ephemeral
+    bats-src --> test["test一時的\nsmoke test、ビルド後に破棄"]:::ephemeral
     bats-ext --> test
     runtime --> test
 
