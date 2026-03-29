@@ -114,54 +114,7 @@ graph TD
 
 ## Smoke Tests
 
-`test/smoke/` に配置 — `docker build --target test` 時に自動実行 — 合計 **22 テスト**。
-
-<details>
-<summary>クリックしてテスト詳細を展開</summary>
-
-#### ROS 環境（3）
-
-| テスト項目 | 説明 |
-|------------|------|
-| `ROS_DISTRO` | 設定済み |
-| `setup.bash` | ファイルが存在する |
-| `setup.bash` | source 可能 |
-
-#### urg_node パッケージ（2）
-
-| テスト項目 | 説明 |
-|------------|------|
-| `urg_node` | `rospack find` で確認可能 |
-| `laser_proc` | `rospack find` で確認可能 |
-
-#### システム（1）
-
-| テスト項目 | 説明 |
-|------------|------|
-| `entrypoint.sh` | 存在し実行可能 |
-
-#### Script help（16）
-
-| テスト項目 | 説明 |
-|------------|------|
-| `build.sh -h` | 終了コード 0 |
-| `build.sh --help` | 終了コード 0 |
-| `build.sh -h` | usage を表示 |
-| `run.sh -h` | 終了コード 0 |
-| `run.sh --help` | 終了コード 0 |
-| `run.sh -h` | usage を表示 |
-| `exec.sh -h` | 終了コード 0 |
-| `exec.sh --help` | 終了コード 0 |
-| `exec.sh -h` | usage を表示 |
-| `stop.sh -h` | 終了コード 0 |
-| `stop.sh --help` | 終了コード 0 |
-| `stop.sh -h` | usage を表示 |
-| `build.sh -h` | `LANG=zh_TW.UTF-8` から zh を検出 |
-| `build.sh -h` | `LANG=ja_JP.UTF-8` から ja を検出 |
-| `build.sh -h` | `LANG=en_US.UTF-8` はデフォルトで en |
-| `build.sh -h` | `SETUP_LANG` が LANG を上書き |
-
-</details>
+詳細は [TEST.md](test/TEST.md) を参照。
 
 ## ディレクトリ構成
 
