@@ -114,54 +114,7 @@ graph TD
 
 ## Smoke Tests
 
-位于 `test/smoke/` — 在 `docker build --target test` 时自动执行 — 共 **22 项测试**。
-
-<details>
-<summary>点击展开测试详情</summary>
-
-#### ROS 环境（3）
-
-| 测试项目 | 说明 |
-|----------|------|
-| `ROS_DISTRO` | 已设置 |
-| `setup.bash` | 文件存在 |
-| `setup.bash` | 可被 source |
-
-#### urg_node 软件包（2）
-
-| 测试项目 | 说明 |
-|----------|------|
-| `urg_node` | 可通过 `rospack find` 查询到 |
-| `laser_proc` | 可通过 `rospack find` 查询到 |
-
-#### 系统（1）
-
-| 测试项目 | 说明 |
-|----------|------|
-| `entrypoint.sh` | 存在且可执行 |
-
-#### Script help（16）
-
-| 测试项目 | 说明 |
-|----------|------|
-| `build.sh -h` | 退出码 0 |
-| `build.sh --help` | 退出码 0 |
-| `build.sh -h` | 显示 usage |
-| `run.sh -h` | 退出码 0 |
-| `run.sh --help` | 退出码 0 |
-| `run.sh -h` | 显示 usage |
-| `exec.sh -h` | 退出码 0 |
-| `exec.sh --help` | 退出码 0 |
-| `exec.sh -h` | 显示 usage |
-| `stop.sh -h` | 退出码 0 |
-| `stop.sh --help` | 退出码 0 |
-| `stop.sh -h` | 显示 usage |
-| `build.sh -h` | 从 `LANG=zh_TW.UTF-8` 检测为 zh |
-| `build.sh -h` | 从 `LANG=ja_JP.UTF-8` 检测为 ja |
-| `build.sh -h` | `LANG=en_US.UTF-8` 默认为 en |
-| `build.sh -h` | `SETUP_LANG` 覆盖 LANG |
-
-</details>
+详见 [TEST.md](test/TEST.md)。
 
 ## 目录结构
 

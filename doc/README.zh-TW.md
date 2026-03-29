@@ -114,54 +114,7 @@ graph TD
 
 ## Smoke Tests
 
-位於 `test/smoke/` — 在 `docker build --target test` 時自動執行 — 共 **22 項測試**。
-
-<details>
-<summary>點擊展開測試詳情</summary>
-
-#### ROS 環境（3）
-
-| 測試項目 | 說明 |
-|----------|------|
-| `ROS_DISTRO` | 已設定 |
-| `setup.bash` | 檔案存在 |
-| `setup.bash` | 可被 source |
-
-#### urg_node 套件（2）
-
-| 測試項目 | 說明 |
-|----------|------|
-| `urg_node` | 可透過 `rospack find` 查詢到 |
-| `laser_proc` | 可透過 `rospack find` 查詢到 |
-
-#### 系統（1）
-
-| 測試項目 | 說明 |
-|----------|------|
-| `entrypoint.sh` | 存在且可執行 |
-
-#### Script help（16）
-
-| 測試項目 | 說明 |
-|----------|------|
-| `build.sh -h` | 結束碼 0 |
-| `build.sh --help` | 結束碼 0 |
-| `build.sh -h` | 顯示 usage |
-| `run.sh -h` | 結束碼 0 |
-| `run.sh --help` | 結束碼 0 |
-| `run.sh -h` | 顯示 usage |
-| `exec.sh -h` | 結束碼 0 |
-| `exec.sh --help` | 結束碼 0 |
-| `exec.sh -h` | 顯示 usage |
-| `stop.sh -h` | 結束碼 0 |
-| `stop.sh --help` | 結束碼 0 |
-| `stop.sh -h` | 顯示 usage |
-| `build.sh -h` | 從 `LANG=zh_TW.UTF-8` 偵測為 zh |
-| `build.sh -h` | 從 `LANG=ja_JP.UTF-8` 偵測為 ja |
-| `build.sh -h` | `LANG=en_US.UTF-8` 預設為 en |
-| `build.sh -h` | `SETUP_LANG` 覆蓋 LANG |
-
-</details>
+詳見 [TEST.md](test/TEST.md)。
 
 ## 目錄結構
 
