@@ -114,7 +114,7 @@ graph TD
 
 ## Smoke Tests
 
-`test/smoke_test/` に配置 — `docker build --target test` 時に自動実行 — 合計 **22 テスト**。
+`test/smoke/` に配置 — `docker build --target test` 時に自動実行 — 合計 **22 テスト**。
 
 <details>
 <summary>クリックしてテスト詳細を展開</summary>
@@ -186,7 +186,7 @@ urg_node_noetic/
 │   ├── build-worker.yaml        # Docker ビルド + smoke test
 │   └── release-worker.yaml      # GitHub Release
 └── test/
-    └── smoke_test/              # Bats 環境テスト
+    └── smoke/              # Bats 環境テスト
         ├── ros_env.bats
         ├── script_help.bats
         └── test_helper.bash

@@ -114,7 +114,7 @@ graph TD
 
 ## Smoke Tests
 
-位於 `test/smoke_test/` — 在 `docker build --target test` 時自動執行 — 共 **22 項測試**。
+位於 `test/smoke/` — 在 `docker build --target test` 時自動執行 — 共 **22 項測試**。
 
 <details>
 <summary>點擊展開測試詳情</summary>
@@ -186,7 +186,7 @@ urg_node_noetic/
 │   ├── build-worker.yaml        # Docker 建置 + smoke test
 │   └── release-worker.yaml      # GitHub Release
 └── test/
-    └── smoke_test/              # Bats 環境測試
+    └── smoke/              # Bats 環境測試
         ├── ros_env.bats
         ├── script_help.bats
         └── test_helper.bash
