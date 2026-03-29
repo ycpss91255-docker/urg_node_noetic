@@ -14,7 +14,7 @@
 ## [v2.0.0] - 2026-03-28
 
 ### 追加
-- migrate from docker_setup_helper to docker_template
+- migrate from docker_setup_helper to template
 - add Wayland display support for X11/Wayland dual compatibility
 
 ### 変更
