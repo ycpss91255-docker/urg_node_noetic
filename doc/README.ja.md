@@ -83,23 +83,19 @@ docker compose --profile test build test
 
 ```mermaid
 graph TD
-    EXT1["bats/bats:latest"]:::external
-    EXT2["alpine:latest"]:::external
-    EXT3["ros:noetic-ros-base-focal"]:::external
+    EXT1["bats/bats:latest"]
+    EXT2["alpine:latest"]
+    EXT3["ros:noetic-ros-base-focal"]
 
-    EXT1 --> bats-src["bats-src"]:::tool
-    EXT2 --> bats-ext["bats-extensions"]:::tool
+    EXT1 --> bats-src["bats-src"]
+    EXT2 --> bats-ext["bats-extensions"]
 
-    EXT3 --> runtime["runtime\nurg_node + laser_proc"]:::stage
+    EXT3 --> runtime["runtime\nurg_node + laser_proc"]
 
-    bats-src --> test["test一時的\nsmoke test、ビルド後に破棄"]:::ephemeral
+    bats-src --> test["test一時的\nsmoke test、ビルド後に破棄"]
     bats-ext --> test
     runtime --> test
 
-    classDef external fill:#555,color:#fff,stroke:#999
-    classDef tool fill:#8B6914,color:#fff,stroke:#c8960c
-    classDef stage fill:#1a5276,color:#fff,stroke:#2980b9
-    classDef ephemeral fill:#6e2c00,color:#fff,stroke:#e67e22,stroke-dasharray:5 5
 ```
 
 ### ステージ説明
