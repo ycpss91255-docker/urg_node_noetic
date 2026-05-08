@@ -1,15 +1,22 @@
-**[English](README.md)** | **[繁體中文](doc/README.zh-TW.md)** | **[简体中文](doc/README.zh-CN.md)** | **[日本語](doc/README.ja.md)**
-
 # Hokuyo URG LiDAR Docker Container (ROS 1 Noetic)
 
-> **TL;DR** — Containerized Hokuyo URG LiDAR driver for ROS 1 Noetic. Installs `ros-noetic-urg-node` and `ros-noetic-laser-proc` from apt, launches `urg_lidar.launch` by default.
->
-> ```bash
-> ./build.sh && ./run.sh
-> ```
+[![CI](https://github.com/ycpss91255-docker/urg_node_noetic/actions/workflows/main.yaml/badge.svg)](https://github.com/ycpss91255-docker/urg_node_noetic/actions/workflows/main.yaml)
+
+**[English](README.md)** | **[繁體中文](doc/README.zh-TW.md)** | **[简体中文](doc/README.zh-CN.md)** | **[日本語](doc/README.ja.md)**
+
+## TL;DR
+
+Containerized Hokuyo URG LiDAR driver for ROS 1 Noetic. Installs `ros-noetic-urg-node` and `ros-noetic-laser-proc` from apt, launches `urg_lidar.launch` by default.
+
+```bash
+./build.sh && ./run.sh
+```
+
+---
 
 ## Table of Contents
 
+- [Overview](#overview)
 - [Features](#features)
 - [Quick Start](#quick-start)
 - [Usage](#usage)
@@ -19,6 +26,10 @@
 - [Directory Structure](#directory-structure)
 
 ---
+
+## Overview
+
+Provides a reproducible ROS 1 Noetic environment for Hokuyo URG-series LiDAR sensors. The container installs `ros-noetic-urg-node` and `ros-noetic-laser-proc` from the ROS apt repository and runs in privileged mode with `/dev` mounted so USB / serial / Ethernet devices appear inside the container with no extra wiring. Multi-arch base image supports x86_64 and ARM64 (Raspberry Pi, Jetson CPU mode).
 
 ## Features
 
