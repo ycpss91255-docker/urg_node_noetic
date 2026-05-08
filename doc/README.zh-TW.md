@@ -2,6 +2,8 @@
 
 # Hokuyo URG LiDAR Docker 容器（ROS 1 Noetic）
 
+[![CI](https://github.com/ycpss91255-docker/urg_node_noetic/actions/workflows/main.yaml/badge.svg)](https://github.com/ycpss91255-docker/urg_node_noetic/actions/workflows/main.yaml) [![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat-square)](../LICENSE)
+
 > **TL;DR** — 容器化的 Hokuyo URG LiDAR ROS 1 Noetic 驅動程式。透過 apt 安裝 `ros-noetic-urg-node` 和 `ros-noetic-laser-proc`，預設啟動 `urg_lidar.launch`。
 >
 > ```bash

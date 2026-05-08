@@ -2,6 +2,8 @@
 
 # Hokuyo URG LiDAR Docker コンテナ（ROS 1 Noetic）
 
+[![CI](https://github.com/ycpss91255-docker/urg_node_noetic/actions/workflows/main.yaml/badge.svg)](https://github.com/ycpss91255-docker/urg_node_noetic/actions/workflows/main.yaml) [![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat-square)](../LICENSE)
+
 > **TL;DR** — コンテナ化された Hokuyo URG LiDAR ROS 1 Noetic ドライバ。apt で `ros-noetic-urg-node` と `ros-noetic-laser-proc` をインストールし、デフォルトで `urg_lidar.launch` を起動します。
 >
 > ```bash
