@@ -130,13 +130,12 @@ ARG CONFIG_SRC="config"
 COPY --chmod=0755 "./${ENTRYPOINT_FILE}" "/entrypoint.sh"
 COPY --chown="${USER}":"${GROUP}" --chmod=0755 .base/config "${CONFIG_DIR}"
 COPY --chown="${USER}":"${GROUP}" --chmod=0755 "${CONFIG_SRC}" "${CONFIG_DIR}"
-COPY --chmod=0755 .base/dockerfile/setup "${SETUP_DIR}"
 
 
 USER "${USER}"
 
 # Setup pip packages
-RUN "${SETUP_DIR}"/pip/setup.sh
+RUN PIP_BREAK_SYSTEM_PACKAGES=1 pip install -r "${CONFIG_DIR}"/pip/requirements.txt
 
 # Setup shell, terminator, tmux
 RUN cat "${CONFIG_DIR}"/shell/bashrc >> "${HOME}/.bashrc" && \
